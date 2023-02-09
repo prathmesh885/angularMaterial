@@ -1,0 +1,21 @@
+<div class="mb-4">
+    <mat-card class="mat-elevation-z5">
+        <mat-card-header>
+            <h2>{{course.description}}</h2>
+        </mat-card-header>
+        <img mat-card-image [src]="course.iconUrl" alt="cardImg">
+        <mat-card-content>
+            <p>
+                {{course.longDescription}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">
+                VIEW COURSE
+            </button>
+            <button mat-raised-button color="accent">
+                EDIT COURSE
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

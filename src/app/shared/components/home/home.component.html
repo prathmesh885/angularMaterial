@@ -1,0 +1,24 @@
+<div class="text-center mt-4">
+    <h1 class="title">All Courses</h1>
+    <button mat-fab color="warn" aria-label="Create New Course" routerLink="/add-course">
+        <mat-icon>
+            add
+        </mat-icon>
+    </button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-tab-group>
+                    <mat-tab label="Beginars">
+                        <app-course-card [course]="course"
+                            *ngFor="let course of beginarCourses$ | async"></app-course-card>
+                    </mat-tab>
+                    <mat-tab label="Advanced">
+                        <app-course-card [course]="course"
+                            *ngFor="let course of advancedCourses$ | async"></app-course-card>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
